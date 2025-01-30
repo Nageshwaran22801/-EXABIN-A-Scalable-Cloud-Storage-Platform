@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a,button,img,div{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.theme-button{
+    padding: 15px 30px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.theme-button:disabled{
+    cursor: default;
+}
+
+.theme-button svg{
+    height: 16px;
+    width: 16px;
+    fill: white;
+}
+
+.white-theme-button{
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.white-theme-button:disabled{
+    cursor: default;
+}
+
+.white-theme-button svg{
+    height: 16px;
+    width: 16px;
+    fill: black;
+}
+
+.outlined-theme-button{
+    padding: 15px 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.trans-button{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.trans-button > svg{
+    height: 16px;
+    width: 16px;
+}
+
+.header{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    width: 200px;
+    height: 80px;
+    position: relative;
+}
+
+.header .nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-inline: 20px;
+}
+
+.header .nav a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.header .nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: all .1s linear;
+}
+
+.header .nav a:hover::after{
+    width: 100%;
+}
+
+.title-text{
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sub-title-text{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.theme-input-field{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+}
+
+.notification{
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.notification div{
+    display: flex;
+    padding: 15px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: black;
+}
+
+.notification div h3{
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    max-width: min(95%,600px);
+}
+
+.notification div svg{
+    height: 18px;
+    width: 18px;
+    fill: white;
+    cursor: pointer;
+}
+
+.alert-dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.alert-dialog > div{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: min(90%,450px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.alert-dialog div p{
+    font-size: 16px;
+}
+
+.red-bg{
+    background-color: #ef5350;
+}
+
+.loader-container{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+}
+
+.invert {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+@keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+}
+
+@media only screen and (max-width: 600px) {
+    .theme-button{
+        padding: 8px 13px;
+        gap: 5px;
+    }
+    .white-theme-button{
+        padding: 8px 13px;
+        gap: 5px;
+    }
+    
+    .outlined-theme-button{
+        padding: 8px 13px;
+        gap: 5px;
+    }
+
+    .trans-button{
+        padding: 5px 10px;
+        gap: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    .trans-button > svg{
+        height: 12px;
+        width: 12px;
+    }
+    .header{
+        padding: 10px;
+    }
+    .header .nav{
+        gap: 10px;
+    }
+    
+    .header .nav a{
+        font-size: 10px;
+    }
+    .header .logo{
+        width: 120px;
+        position: relative;
+    }
+  }

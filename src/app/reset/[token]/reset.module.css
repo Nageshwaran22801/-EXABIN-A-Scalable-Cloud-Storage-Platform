@@ -1,0 +1,65 @@
+.section{
+    height: 100vh;
+    width: 100%;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+
+.container{
+    width: min(450px, 95%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.success-svg{
+    height: 150px;
+    width: 150px;
+    fill: #4caf50;
+}
+
+.failure-svg{
+    height: 150px;
+    width: 150px;
+    fill: #ddd;
+}
+
+.container .text{
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.container .link-text{
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .link-text:hover{
+    text-decoration: underline;
+}
+
+.new-password-form{
+    width: min(95%,450px);
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-password-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-password-form p{
+    color: red;
+}

@@ -1,0 +1,193 @@
+.section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(to bottom, black 0%, black 25%, white 25%, white 100%);
+    padding-top: 30px;
+}
+
+.noscroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.welcome-msg{
+    font-size: 32px;
+    color: white;
+}
+
+.settings-icon{
+    height: 32px;
+    width: 32px;
+    fill: white;
+    cursor: pointer;
+}
+
+.buckets-container{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    flex-grow: 1;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    align-content: start;
+    justify-content: start;
+}
+
+.container-div{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    flex-grow: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    color: #000000;
+}
+
+.container-div svg{
+    height: 150px;
+    width: 150px;
+    fill: #ddd;
+}
+
+.bucket{
+    aspect-ratio: 3/2;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.bucket h3{
+    font-size: 16px;
+}
+
+.bucket p{
+    font-size: 12px;
+    color: #666;
+}
+
+.bucket svg{
+    height: 18px;
+    width: 18px;
+    fill: #333;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.create-bucket{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #000000aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-bucket form{
+    width: min(400px,95%);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.create-bucket form > *{
+    width: 100%;
+}
+
+.create-bucket form > label{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.create-bucket form svg{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.options-menu{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-menu button{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.options-menu button:last-child{
+    border-bottom: none !important;
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome-msg{
+        font-size: 20px;
+    }
+
+    .section {
+        gap: 0px;
+    }
+    .row{
+        gap: 5px;
+    }
+}

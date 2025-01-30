@@ -1,0 +1,26 @@
+{
+  "name": "exabin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/formidable": "^3.4.5",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "formidable": "^3.5.2",
+    "next": "14.2.7",
+    "nodemailer": "^6.9.15",
+    "pg": "^8.13.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7"
+  }
+}

@@ -1,0 +1,93 @@
+.section{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.center-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    box-sizing: border-box;
+}
+
+.center-div div{
+    display: flex;
+    gap: 30px;
+}
+
+.cubes-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.cubes-container .cube:first-child{
+    position: relative;
+    top: -50px;
+}
+
+.cubes-container .cube:last-child{
+    position: relative;
+    top: -50px;
+}
+
+.cubes-container .cube:nth-child(2){
+    position: relative;
+    top: 50px;
+    z-index: 1;
+}
+
+.cube .side{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.cube .top {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    transform: rotate(-45deg) skew(15deg, 15deg);
+  }
+
+.cube  .left {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+  }
+  
+.cube .right {
+    border-top: 1px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cubes-container{
+        max-width: 100%;
+    }
+  }

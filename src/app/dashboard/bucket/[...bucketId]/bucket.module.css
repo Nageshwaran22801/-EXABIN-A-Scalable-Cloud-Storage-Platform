@@ -1,0 +1,406 @@
+.section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-row h3{
+    font-weight: normal;
+    font-size: 16px;
+    color: black;
+}
+
+.header-row > div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.header-row > div:first-child > span{
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header-row > div:last-child{
+    display: flex;
+    gap: 20px;
+}
+
+.files-container{
+    flex: 1;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.files-container table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.files-container thead tr{
+    background-color: #ddd;
+}
+
+.files-row{
+    border-bottom: 1px solid #ddd;
+}
+
+.files-row td{
+    height: fit-content;
+    text-align: left;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.files-row th{
+    height: fit-content;
+    text-align: left;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.files-row td:first-child{
+    width: 32px;
+}
+
+.files-row td:last-child{
+    width: 32px;
+}
+
+.files-row .icon{
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+
+.files-row td, .files-row th{
+    font-size: 16px;
+}
+
+.files-row .icon .extn{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 8px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.files-row .file-name{
+    font-weight: normal;
+    color: black;
+    max-width: 150px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.files-row .file-name:hover{
+    text-decoration: underline;
+}
+
+.files-row .menu-btn{
+    position: relative;
+}
+
+.files-row .menu-btn svg{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.empty-state-container{
+    flex: 1;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.empty-state-container svg{
+    height: 200px;
+    width: 200px;
+    fill: #ddd;
+}
+
+.empty-state-container h2{
+    color: #ddd;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.options-menu{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-menu > *{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    min-width: 100px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+}
+
+.options-menu button:last-child{
+    border-bottom: none !important;
+    color: red;
+}
+
+.create-folder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #000000aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-folder form{
+    width: min(400px,95%);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.create-folder form > *{
+    width: 100%;
+}
+
+.create-folder form > label{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.create-folder form svg{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.load-more-btn{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.upload-files-container{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000aa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-files-container > div{
+    height: 80%;
+    width: min(95%, 1200px);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 10px 70px 10px;
+    position: relative;
+}
+
+.upload-file-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 0.5px solid #ddd;
+}
+
+.upload-file-row > svg{
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+
+.upload-file-row > span > span{
+    color: #aaa;
+}
+
+.upload-file-row > span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.add-files-text{
+    width: 100%;
+    padding: 50px 10px;
+    text-align: center;
+}
+
+.add-files-container{
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-files-container > svg{
+    height: 100px;
+    width: 100px;
+    fill: #808080;
+}
+
+.upload-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    margin: auto;
+    width: 95%;
+}
+
+.upload-files-list-container{
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.upload-files-container .close-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    fill: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.success-icon,.failed-icon{
+    height: 14px;
+    width: 14px;
+}
+
+.success-icon{
+    fill: #388e3c;
+}
+
+.failed-icon{
+    fill: #ef5350;
+}
+
+@media only screen and (max-width: 600px){
+    .header-row > div:last-child{
+        gap: 7px;
+    }
+    .header-row h3{
+        font-size: 14px;
+    }
+    .header-row > div:first-child > span{
+        font-size: 12px;
+    }
+    .load-more-btn{
+        padding: 7px;
+        font-size: 14px;
+    }
+    .files-row td:first-child{
+        width: 24px;
+    }
+    
+    .files-row td:last-child{
+        width: 24px;
+    }
+    
+    .files-row .icon{
+        height: 24px;
+        width: 24px;
+    }
+
+    .files-row .icon .extn{
+        font-size: 7px;
+        padding: 1px;
+    }
+
+    .files-row .file-name{
+        font-size: 14px;
+        max-width: 120px !important;
+    }
+    .files-row td, .files-row th{
+        font-size: 14px;
+    }
+}

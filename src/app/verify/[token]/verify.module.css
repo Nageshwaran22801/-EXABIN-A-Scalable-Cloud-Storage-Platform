@@ -1,0 +1,47 @@
+.section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: min(450px, 95%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-svg{
+    height: 150px;
+    width: 150px;
+    fill: #4caf50;
+}
+
+.failure-svg{
+    height: 150px;
+    width: 150px;
+    fill: #ddd;
+}
+
+.container .text{
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.container .link-text{
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .link-text:hover{
+    text-decoration: underline;
+}

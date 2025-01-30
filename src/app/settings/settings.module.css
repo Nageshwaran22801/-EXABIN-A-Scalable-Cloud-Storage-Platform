@@ -1,0 +1,61 @@
+.section{
+    min-height: 100vh;
+}
+
+.header{
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 20px;
+    box-sizing: border-box;
+}
+
+.header > button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: min(100%,300px);
+    height: calc(100vh - 50px);
+    border-right: 1px solid #ddd;
+}
+
+.menu > button{
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.selected{
+    background-color: rgb(249,250,251) !important;
+}
+
+.menu > button > svg{
+    height: 14px;
+    width: 14px;
+}
+
+.container{
+    display: flex;
+}
+
+.red{
+    color: red;
+}
+
+.red > svg{
+    fill: red;
+}

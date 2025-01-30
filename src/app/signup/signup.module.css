@@ -1,0 +1,45 @@
+.section{
+    width: 100%;
+    height: 100vh;
+}
+
+.center-div{
+    display: flex;
+    padding: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.center-div form{
+    width: min(400px,95%);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+}
+
+.center-div form > *{
+    width: 100%;
+}
+
+.center-div form > label{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.login-link-text{
+    color: black;
+    font-size: 12px;
+}
+
+.passwords-mismatch{
+    color: red;
+    font-size: 12px;
+}
